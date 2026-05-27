@@ -13,7 +13,7 @@ public record Money
     
     public static Result<Money> Create(decimal amount, Currency currency)
     {
-        if (amount < 0)
+        if (amount <= 0)
         {
             return Result<Money>.Failure(SharedErrors.Money.NegativeOrZero);
         }
