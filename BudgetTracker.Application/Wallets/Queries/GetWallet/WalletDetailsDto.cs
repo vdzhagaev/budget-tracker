@@ -10,5 +10,5 @@ public sealed record WalletDetailsDto(
     uint Version,
     decimal IncomesTotal,
     decimal ExpensesTotal,
-    int TransactionsTotal
+    int TransactionsCount
     );
