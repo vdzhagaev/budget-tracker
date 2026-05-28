@@ -1,3 +1,3 @@
 namespace BudgetTracker.Application.Wallets.Queries.ListWallets;
 
-public record ListWalletsQuery();
+public sealed record ListWalletsQuery();

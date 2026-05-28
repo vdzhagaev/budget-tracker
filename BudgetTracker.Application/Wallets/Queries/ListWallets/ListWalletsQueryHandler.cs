@@ -1,6 +1,6 @@
 namespace BudgetTracker.Application.Wallets.Queries.ListWallets;
 
-public class ListWalletsQueryHandler
+public sealed class ListWalletsQueryHandler
 {
     private readonly IWalletRepository _repository;
     public ListWalletsQueryHandler(IWalletRepository repository) =>
