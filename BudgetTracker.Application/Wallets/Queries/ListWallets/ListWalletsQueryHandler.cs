@@ -1,9 +1,9 @@
 namespace BudgetTracker.Application.Wallets.Queries.ListWallets;
 
-public class ListWalletQueryHandler
+public class ListWalletsQueryHandler
 {
     private readonly IWalletRepository _repository;
-    public ListWalletQueryHandler(IWalletRepository repository) =>
+    public ListWalletsQueryHandler(IWalletRepository repository) =>
         _repository = repository;
 
     public async Task<IReadOnlyList<WalletSummaryDto>> HandleAsync(ListWalletsQuery query, CancellationToken ct)
