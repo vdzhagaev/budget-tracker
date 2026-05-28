@@ -11,7 +11,7 @@ public sealed class ListWalletsQueryHandler
         var wallets = await _repository.ListAllAsync(ct);
         return wallets.Count == 0 ? [] : wallets
             .OrderBy(w => w.Name, StringComparer.OrdinalIgnoreCase)
-            .Select(w => w.ToWalletSummaryDto())
+            .Select(w => w.ToSummaryDto())
             .ToList();
     }
 }

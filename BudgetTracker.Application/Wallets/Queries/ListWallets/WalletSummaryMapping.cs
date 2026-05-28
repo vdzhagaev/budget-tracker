@@ -4,7 +4,7 @@ namespace BudgetTracker.Application.Wallets.Queries.ListWallets;
 
 public static class WalletSummaryMapping
 {
-    public static WalletSummaryDto ToWalletSummaryDto(this Wallet wallet)
+    public static WalletSummaryDto ToSummaryDto(this Wallet wallet)
     {
         return new WalletSummaryDto(
             Id: wallet.Id,
