@@ -1,6 +1,3 @@
 namespace BudgetTracker.Application.Wallets.Queries.GetWallet;
 
-public class GetWalletQuery
-{
-    
-}
+public sealed record GetWalletQuery(Guid WalletId);
