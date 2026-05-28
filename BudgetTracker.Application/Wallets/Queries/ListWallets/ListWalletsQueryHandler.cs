@@ -9,7 +9,7 @@ public sealed class ListWalletsQueryHandler
     public async Task<IReadOnlyList<WalletSummaryDto>> HandleAsync(ListWalletsQuery query, CancellationToken ct)
     {
         var wallets = await _repository.ListAllAsync(ct);
-        return wallets.Count == 0 ? [] : wallets
+        return wallets
             .OrderBy(w => w.Name, StringComparer.OrdinalIgnoreCase)
             .Select(w => w.ToSummaryDto())
             .ToList();
